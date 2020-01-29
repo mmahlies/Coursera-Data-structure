@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<binaryTree>
+  <traveleseTheTree>
+    <DepthFirst>
+      <inOrder>     
+        function inorder(node n)
+        {
+         if n == null
+          {return}
+          
+          inorder(n.left)
+          print (n)
+          inorder(n.write)
+        }
+      </inOrder>
+      <preOrder> 
+        n
+        left 
+        write
+      </preOrder>
+      <postOrdeR >
+        left
+        write
+        n
+      </postOrdeR>
+    </DepthFirst>
+    <breadthFirst used=" can use to get the tree height">
+      using queue
+    </breadthFirst>
+  </traveleseTheTree>
+  <terminology>
+    <Ancictor>
+      parent of parent 
+    </Ancictor>
+    <decendant>
+      Child of child
+    </decendant>
+    <sibiling>
+      in the same level
+    </sibiling>
+    <leaf>
+      last node that has no child
+    </leaf>
+  </terminology>
+</binaryTree>

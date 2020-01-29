@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29021.104
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBrackets", "CheckBrackets\CheckBrackets.csproj", "{6E620EFA-D79F-4965-9C29-FA0FABB47613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputeTreeHeight", "ComputeTreeHeight\ComputeTreeHeight.csproj", "{5256C2A8-D532-4D74-B495-8249DA06A157}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "read me", "read me", "{B61DD6B4-18F7-4BB6-9D8E-1D2CACDCE227}"
+	ProjectSection(SolutionItems) = preProject
+		_61d056196c0646e8667f6765d9aa0f96_Programming-Assignment-1.pdf = _61d056196c0646e8667f6765d9aa0f96_Programming-Assignment-1.pdf
+		Solution Items\stacks_and_queues.pdf = Solution Items\stacks_and_queues.pdf
+		Tree.xml = Tree.xml
+		trees.pdf = trees.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network packet processing simulation", "Network packet processing simulation\Network packet processing simulation.csproj", "{FEC353B8-EA15-4DEF-84BC-A3A62D89E965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkPacketProcessingSimulation.test", "NetworkPacketProcessingSimulation.test\NetworkPacketProcessingSimulation.test.csproj", "{A2136D94-54FC-4E65-A594-1B54D2F47C67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E620EFA-D79F-4965-9C29-FA0FABB47613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E620EFA-D79F-4965-9C29-FA0FABB47613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E620EFA-D79F-4965-9C29-FA0FABB47613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E620EFA-D79F-4965-9C29-FA0FABB47613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5256C2A8-D532-4D74-B495-8249DA06A157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5256C2A8-D532-4D74-B495-8249DA06A157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5256C2A8-D532-4D74-B495-8249DA06A157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5256C2A8-D532-4D74-B495-8249DA06A157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC353B8-EA15-4DEF-84BC-A3A62D89E965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC353B8-EA15-4DEF-84BC-A3A62D89E965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC353B8-EA15-4DEF-84BC-A3A62D89E965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC353B8-EA15-4DEF-84BC-A3A62D89E965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2136D94-54FC-4E65-A594-1B54D2F47C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2136D94-54FC-4E65-A594-1B54D2F47C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2136D94-54FC-4E65-A594-1B54D2F47C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2136D94-54FC-4E65-A594-1B54D2F47C67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4F6E7EA-7CA6-430C-90AD-66F43EA9F047}
+	EndGlobalSection
+EndGlobal

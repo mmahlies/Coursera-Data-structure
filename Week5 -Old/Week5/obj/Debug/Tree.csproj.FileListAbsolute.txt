@@ -1,0 +1,7 @@
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\bin\Debug\Week5.exe.config
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\bin\Debug\Week5.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\bin\Debug\Week5.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\obj\Debug\Tree.csprojAssemblyReference.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\obj\Debug\Week5.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5 -Old\Week5\obj\Debug\Week5.pdb

@@ -1,0 +1,7 @@
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\bin\Debug\PhoneNumber.exe.config
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\bin\Debug\PhoneNumber.exe
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\bin\Debug\PhoneNumber.pdb
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\obj\Debug\PhoneNumber.csprojResolveAssemblyReference.cache
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\obj\Debug\PhoneNumber.csproj.CoreCompileInputs.cache
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\obj\Debug\PhoneNumber.exe
+C:\Users\mono\source\repos\Week4Hashing\PhoneNumber\obj\Debug\PhoneNumber.pdb

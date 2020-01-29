@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{74C5C05A-EF74-4955-B2D6-9E414DCB24CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assginment1_TreeTravelse", "Assginment1_TreeTravelse\Assginment1_TreeTravelse.csproj", "{85DC2B44-46BE-452C-B3DA-A29788ECC3B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsBinarySearchTree", "IsBinarySearchTree\IsBinarySearchTree.csproj", "{A59EFDF0-F563-43BA-830A-AA1D14B84638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsBinarySearch_HardOne", "IsBinarySearch_HardOne\IsBinarySearch_HardOne.csproj", "{3B349CB8-2599-4938-A175-C2FA2837ECBF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mohamedmahlies.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tree\\Tree.csproj
+		SccProjectName1 = Tree
+		SccLocalPath1 = Tree
+		SccProjectUniqueName2 = Assginment1_TreeTravelse\\Assginment1_TreeTravelse.csproj
+		SccProjectName2 = Assginment1_TreeTravelse
+		SccLocalPath2 = Assginment1_TreeTravelse
+		SccProjectUniqueName3 = IsBinarySearchTree\\IsBinarySearchTree.csproj
+		SccProjectName3 = IsBinarySearchTree
+		SccLocalPath3 = IsBinarySearchTree
+		SccProjectUniqueName4 = IsBinarySearch_HardOne\\IsBinarySearch_HardOne.csproj
+		SccProjectName4 = IsBinarySearch_HardOne
+		SccLocalPath4 = IsBinarySearch_HardOne
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C5C05A-EF74-4955-B2D6-9E414DCB24CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C5C05A-EF74-4955-B2D6-9E414DCB24CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C5C05A-EF74-4955-B2D6-9E414DCB24CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C5C05A-EF74-4955-B2D6-9E414DCB24CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85DC2B44-46BE-452C-B3DA-A29788ECC3B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85DC2B44-46BE-452C-B3DA-A29788ECC3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85DC2B44-46BE-452C-B3DA-A29788ECC3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85DC2B44-46BE-452C-B3DA-A29788ECC3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59EFDF0-F563-43BA-830A-AA1D14B84638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59EFDF0-F563-43BA-830A-AA1D14B84638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59EFDF0-F563-43BA-830A-AA1D14B84638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59EFDF0-F563-43BA-830A-AA1D14B84638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B349CB8-2599-4938-A175-C2FA2837ECBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B349CB8-2599-4938-A175-C2FA2837ECBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B349CB8-2599-4938-A175-C2FA2837ECBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B349CB8-2599-4938-A175-C2FA2837ECBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAB335AC-8D39-4BED-94BD-4856A8969924}
+	EndGlobalSection
+EndGlobal
