@@ -6,24 +6,33 @@ using System.Threading.Tasks;
 
 namespace PriorityQueue
 {
-   
+
     class Program
     {
         static void Main(string[] args)
         {
-            int[] array = new int[5] { 5,4,3,2,1};
+            int[] array = new int[5] { 7, 6, 4, 3, 1 };
             PiriortyQueue piriorty = new PiriortyQueue(array);
-            for (int i = 0; i < array.Length; i++)
+            piriorty.Insert(2);
+            piriorty.Insert(5);
+
+            int min = piriorty.ExtractMax();
+            while (min != -1)
             {
-                Console.WriteLine(piriorty.ExtractMax());    
-            }                                     
+
+                Console.WriteLine(min);
+                min = piriorty.ExtractMax();
+            }
+
+
+            Console.Read();
         }
     }
 
     class PiriortyQueue
     {
         int[] array;
-        int size;
+        public int size;
         public PiriortyQueue(int[] array)
         {
             this.array = array;
@@ -39,6 +48,26 @@ namespace PriorityQueue
                 SwiftDown(i);
             }
         }
+
+        public void Insert(int i)
+        {
+            if (array.Count() == size)
+            {
+                Array.Resize(ref array, size == 0 ? 2 : size * 2);
+            }
+
+
+            // insert the new element
+            array[size] = i;
+
+            SwiftUp(size);
+
+            // increase the size
+            size++;
+
+        }
+
+
         /// <summary>
         /// used to make parent min node in it's subtree
         /// </summary>
@@ -61,7 +90,7 @@ namespace PriorityQueue
                 Swap(i, minI);
                 SwiftDown(minI);
             }
-         
+
         }
 
         /// <summary>
@@ -74,7 +103,7 @@ namespace PriorityQueue
             if (size != 0)
             {
                 int max = array[0];
-                array[0] = array[size-1];
+                array[0] = array[size - 1];
                 SwiftDown(0);
                 size--;
                 return max;
@@ -88,7 +117,7 @@ namespace PriorityQueue
         /// <param name="i"></param>
         public void RemoveElement(int i)
         {
-            array[i] =  int.MaxValue;
+            array[i] = int.MaxValue;
             SwiftUp(i);
             ExtractMax();
         }
@@ -148,7 +177,7 @@ namespace PriorityQueue
         /// <returns></returns>
         private int Parent(int i)
         {
-            return (i - 1) / 0;
+            return (i - 1) / 2;
         }
 
         /// <summary>
