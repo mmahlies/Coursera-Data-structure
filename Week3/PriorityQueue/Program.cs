@@ -21,7 +21,7 @@ namespace PriorityQueue
             {
 
                 Console.WriteLine(min);
-                min = piriorty.ExtractMax();
+                min = piriorty.ExtractMax();                                                        
             }
 
 

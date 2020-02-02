@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Disjontset_Naive;
+using JointSet_NAive;
+
 namespace joinset_NaiveTest
 {
     [TestClass]
@@ -25,6 +27,26 @@ namespace joinset_NaiveTest
 
             disjointNaive.Union(7, 1);
             Assert.AreEqual(disjointNaive.Find(8), 1);
+        }
+        [TestMethod]
+        public void TestEfficientDisjointSet()
+        {
+
+            int[] x1 = new int[3] { 1, 2, 3 };
+            int[] x2 = new int[3] { 4, 5, 6 };
+            int[] x3 = new int[2] { 7, 8 };
+
+                EfficientDisjointSet effecientJointSet =new  EfficientDisjointSet(9);
+            effecientJointSet.MakeSet(x1);
+            effecientJointSet.MakeSet(x2);
+            effecientJointSet.MakeSet(x3);
+
+            Assert.AreEqual(effecientJointSet.Find(2), 1);
+            Assert.AreEqual(effecientJointSet.Find(6), 4);
+            Assert.AreEqual(effecientJointSet.Find(7), 7);
+
+            effecientJointSet.Union(7, 1);
+            Assert.AreEqual(effecientJointSet.Find(7), effecientJointSet.Find(1));
         }
     }
 }
