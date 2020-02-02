@@ -9,25 +9,34 @@ namespace JointSet_NAive
     public class EfficientDisjointSet
     {
         int[] parent;
+        int[] rank;
         public EfficientDisjointSet(int n)
         {
-                   parent = new int[n];
+            parent = new int[n];
+            rank = new int[n];
+        }
+
+        public void MakeSet(int i)
+        {
+         
+                parent[i] = i;
+            // inital rank value
+            rank[i] = 0;
+         
         }
 
         public void MakeSet(int[] set)
         {
-            // take first element of set
-            int firstEl = set[0];
-
             for (int i = 0; i < set.Length; i++)
             {
-                parent[set[i]] = firstEl;
+                MakeSet(set[i]);
             }
         }
 
         public int Find(int id)
-        {            
-            while (id != parent[id]){
+        {
+            while (id != parent[id])
+            {
                 id = parent[id];
             }
             return id;
@@ -42,14 +51,23 @@ namespace JointSet_NAive
             {
                 return;
             }
-            // convert all yParent to xParent
-            for (int i = 0; i < parent.Length; i++)
+
+            if (rank[xParent] > rank[yParent])
             {
-                if (parent[i] == yParent)
-                {
-                    parent[i] = xParent;
-                }
+                parent[yParent] = xParent;
             }
+            if (rank[xParent] < rank[yParent])
+            {
+                parent[xParent] = yParent;
+            }
+            if (rank[xParent] == rank[yParent])
+            {
+                // put x under y
+                parent[xParent] = yParent;
+                rank[yParent]++;
+
+            }
+           
         }
 
     }

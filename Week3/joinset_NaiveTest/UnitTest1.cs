@@ -37,14 +37,21 @@ namespace joinset_NaiveTest
             int[] x3 = new int[2] { 7, 8 };
 
                 EfficientDisjointSet effecientJointSet =new  EfficientDisjointSet(9);
+
             effecientJointSet.MakeSet(x1);
             effecientJointSet.MakeSet(x2);
             effecientJointSet.MakeSet(x3);
 
-            Assert.AreEqual(effecientJointSet.Find(2), 1);
-            Assert.AreEqual(effecientJointSet.Find(6), 4);
-            Assert.AreEqual(effecientJointSet.Find(7), 7);
 
+            effecientJointSet.Union(1, 2);
+            effecientJointSet.Union(1, 3);
+
+            effecientJointSet.Union(4, 5);
+            effecientJointSet.Union(4, 6);
+
+            effecientJointSet.Union(7, 8);
+
+       
             effecientJointSet.Union(7, 1);
             Assert.AreEqual(effecientJointSet.Find(7), effecientJointSet.Find(1));
         }
