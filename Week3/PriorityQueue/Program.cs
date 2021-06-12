@@ -29,10 +29,15 @@ namespace PriorityQueue
         }
     }
 
-    class PiriortyQueue
+   public class PiriortyQueue
     {
         int[] array;
         public int size;
+
+        public PiriortyQueue()
+        {
+            this.array = new int[0];
+        }
         public PiriortyQueue(int[] array)
         {
             this.array = array;
@@ -40,6 +45,9 @@ namespace PriorityQueue
             BuildArray();
         }
 
+        /// <summary>
+        ///  bottom up method for build heab from array
+        /// </summary>
         private void BuildArray()
         {
             int midNode = (array.Length - 1) / 2;
@@ -51,11 +59,12 @@ namespace PriorityQueue
 
         public void Insert(int i)
         {
+            // resize array if needed
             if (array.Count() == size)
             {
                 Array.Resize(ref array, size == 0 ? 2 : size * 2);
             }
-
+                                                      
 
             // insert the new element
             array[size] = i;
@@ -68,30 +77,7 @@ namespace PriorityQueue
         }
 
 
-        /// <summary>
-        /// used to make parent min node in it's subtree
-        /// </summary>
-        /// <param name="i"></param>
-        private void SwiftDown(int i)
-        {
-            int minI = i;
-            int left = LeftChild(i);
-            int right = RightChild(i);
-            if (left < size && array[left] < array[minI])
-            {
-                minI = left;
-            }
-            if (right < size && array[right] < array[minI])
-            {
-                minI = right;
-            }
-            if (minI != i)
-            {
-                Swap(i, minI);
-                SwiftDown(minI);
-            }
-
-        }
+       
 
         /// <summary>
         /// Get max piroity
@@ -104,6 +90,7 @@ namespace PriorityQueue
             {
                 int max = array[0];
                 array[0] = array[size - 1];
+                // to do set           array[size - 1] = null
                 SwiftDown(0);
                 size--;
                 return max;
@@ -180,6 +167,33 @@ namespace PriorityQueue
             return (i - 1) / 2;
         }
 
+
+
+        /// <summary>
+        /// used to make parent min node in it's subtree       
+        /// </summary>
+        /// <param name="i"></param>
+        private void SwiftDown(int i)
+        {
+            int maxI = i;
+            int left = LeftChild(i);
+            int right = RightChild(i);
+            if (left < size && array[left] > array[maxI])
+            {
+                maxI = left;
+            }
+            if (right < size && array[right] > array[maxI])
+            {
+                maxI = right;
+            }
+            if (maxI != i)
+            {
+                Swap(i, maxI);
+                SwiftDown(maxI);
+            }
+
+        }
+
         /// <summary>
         /// used to ensure from this node is min one in thier tree by bubble up
         /// </summary>
@@ -187,7 +201,7 @@ namespace PriorityQueue
         private void SwiftUp(int i)
         {
             if (i < 1) return; // base case
-            if (array[i] < array[Parent(i)])
+            if (array[i] > array[Parent(i)])
             {
                 Swap(i, Parent(i));
             }

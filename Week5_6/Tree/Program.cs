@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Week5_6
 {
@@ -33,7 +30,8 @@ namespace Week5_6
         //public Node Root { get; set; }
 
         /// <summary>
-        /// get node if exsist or the parent node of this element to append this node in the future
+        /// get node if exsist 
+        /// if not exist get the parent node of the inserted element 
         ///  I think Find return Leafe
         /// </summary>
         /// <param name="k"></param>
