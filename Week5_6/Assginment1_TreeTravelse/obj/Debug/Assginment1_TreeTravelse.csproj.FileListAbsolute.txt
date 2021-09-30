@@ -1,0 +1,7 @@
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\bin\Debug\Assginment1_TreeTravelse.exe.config
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\bin\Debug\Assginment1_TreeTravelse.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\bin\Debug\Assginment1_TreeTravelse.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\obj\Debug\Assginment1_TreeTravelse.csproj.AssemblyReference.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\obj\Debug\Assginment1_TreeTravelse.csproj.CoreCompileInputs.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\obj\Debug\Assginment1_TreeTravelse.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Assginment1_TreeTravelse\obj\Debug\Assginment1_TreeTravelse.pdb

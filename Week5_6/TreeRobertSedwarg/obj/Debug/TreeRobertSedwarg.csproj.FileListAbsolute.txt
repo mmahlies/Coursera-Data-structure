@@ -1,0 +1,7 @@
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\bin\Debug\TreeRobertSedwarg.exe.config
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\bin\Debug\TreeRobertSedwarg.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\bin\Debug\TreeRobertSedwarg.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\obj\Debug\TreeRobertSedwarg.csproj.AssemblyReference.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\obj\Debug\TreeRobertSedwarg.csproj.CoreCompileInputs.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\obj\Debug\TreeRobertSedwarg.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\TreeRobertSedwarg\obj\Debug\TreeRobertSedwarg.pdb

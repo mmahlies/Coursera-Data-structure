@@ -4,3 +4,10 @@ C:\Users\mono\source\repos\Week5_6\Tree\bin\Debug\Tree.exe
 C:\Users\mono\source\repos\Week5_6\Tree\bin\Debug\Tree.pdb
 C:\Users\mono\source\repos\Week5_6\Tree\obj\Debug\Tree.exe
 C:\Users\mono\source\repos\Week5_6\Tree\obj\Debug\Tree.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\bin\Debug\Tree.exe.config
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\bin\Debug\Tree.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\bin\Debug\Tree.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\obj\Debug\Tree.csproj.AssemblyReference.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\obj\Debug\Tree.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\Tree\obj\Debug\Tree.pdb

@@ -1,0 +1,7 @@
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\bin\Debug\IsBinarySearchTree.exe.config
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\bin\Debug\IsBinarySearchTree.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\bin\Debug\IsBinarySearchTree.pdb
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\obj\Debug\IsBinarySearchTree.csproj.AssemblyReference.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\obj\Debug\IsBinarySearchTree.csproj.CoreCompileInputs.cache
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\obj\Debug\IsBinarySearchTree.exe
+D:\My Work\Coursera Algorithm data structure specialization\Data structure\Week5_6\IsBinarySearchTree\obj\Debug\IsBinarySearchTree.pdb

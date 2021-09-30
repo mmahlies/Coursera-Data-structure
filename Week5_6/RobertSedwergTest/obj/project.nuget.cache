@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "o2BBA8grBQyPZH8pkJiw4vFn5B3DOqgbHEXkDoYNjiGWRu+EW1egwk514OhYzAs3heM4RLH1mOXCKwA8kFEzNw==",
+  "success": true,
+  "projectFilePath": "D:\\My Work\\Coursera Algorithm data structure specialization\\Data structure\\Week5_6\\RobertSedwergTest\\RobertSedwergTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mono\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\mono\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\mono\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\mono\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+  ],
+  "logs": []
+}
