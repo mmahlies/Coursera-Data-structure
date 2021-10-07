@@ -11,6 +11,95 @@ namespace TreeRobertSedwarg
     {
         public Node Root { get; set; }
 
+
+        // u hsvr to run to phases 
+        // 1- check the node exisit or not 
+        //if exsist  => update node
+        /*
+         if not then in each step update size and height values in the correct side
+         */
+
+        public void PutItrative(int key, int value)
+        {
+            if (Root == null)
+            {
+                Root = new Node() { Key = key, Value = value };
+                Root.RankNo = 0;
+                Root.HeightNo = 1;
+                return;
+            }
+            var rootInistance = Root;
+
+            bool isExist = false;
+            while (rootInistance != null)
+            {
+                if (rootInistance.Key > key)
+                {
+                    rootInistance = rootInistance.Left;
+                }
+                else if (rootInistance.Key < key)
+                {
+                    rootInistance = rootInistance.Right;
+                }
+                else
+                {
+
+                    rootInistance.Value = value;
+                    isExist = true;
+                }
+            }
+
+
+            if (!isExist)
+            {
+                rootInistance = Root;
+                while (rootInistance != null)
+                {
+                    if (rootInistance.Key > key)
+                    {
+                        if (rootInistance.Left == null)
+                        {
+                            rootInistance = new Node() { Key = key, Value = value };
+                            return;
+                        }
+                        else
+                        {
+
+                            rootInistance = rootInistance.Left;
+                        }
+                    }
+                    else if (rootInistance.Key < key)
+                    {
+                        if (rootInistance.Right == null)
+                        {
+                            rootInistance = new Node() { Key = key, Value = value };
+                            return;
+                        }
+                        else
+                        {
+                            rootInistance = rootInistance.Right;
+                        }
+                    }
+
+
+                    rootInistance.RankNo = rootInistance.RankNo + 1;
+                    rootInistance.HeightNo = rootInistance.HeightNo + 1;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
         public void Put(int key, int value)
         {
             Root = Put(Root, key, value);
@@ -64,6 +153,34 @@ namespace TreeRobertSedwarg
 
         }
 
+
+        public Node GetItrative(int key)
+        {
+            return GetItrative(Root, key);
+        }
+
+        private Node GetItrative(Node root, int key)
+        {
+
+            while (root != null)
+            {
+                if (root.Key > key)
+                {
+                    root = root.Left;
+                }
+                else if (root.Key < key)
+                {
+                    root = root.Right;
+                }
+                else
+                {
+                    return root;
+                }
+            }
+            return null;
+
+        }
+
         // to get the siiiiiiiiiiiiiize oif given node
         private int Size(Node node)
         {
@@ -85,6 +202,21 @@ namespace TreeRobertSedwarg
             return node.Left == null ? node : Min(node.Left);
         }
 
+        public Node MinItrative(Node node)
+        {
+            if (node == null)
+            {
+                return node;
+            }
+
+            while (node.Left != null)
+            {
+                node = node.Left;
+            }
+
+            return node;
+        }
+
         public Node Max(Node node)
         {
             if (node == null)
@@ -94,12 +226,26 @@ namespace TreeRobertSedwarg
             return node.Right == null ? node : Max(node.Right);
         }
 
+        public Node MaxItrative(Node node)
+        {
+            if (node == null)
+            {
+                return node;
+            }
+
+            while (node.Right != null)
+            {
+                node = node.Right;
+            }
+
+            return node;
+        }
+
+
         public Node Floor(int key)
         {
             return Floor(Root, key);
         }
-
-
         // smalest key <= to the key
         private Node Floor(Node root, int key)
         {
@@ -132,6 +278,39 @@ namespace TreeRobertSedwarg
             }
 
             throw new Exception("dead path");
+        }
+
+        // smalest key <= to the key
+        public Node FloorItrative(int key)
+        {
+
+            Node floorNode = null;
+            var inistanceRoot = Root;
+            while (inistanceRoot != null)
+            {
+                // case 1
+                if (inistanceRoot.Key == key)
+                {
+                    floorNode = inistanceRoot;
+                    break;
+                }
+
+                else if (inistanceRoot.Key < key)
+                {
+                    // can be this root or the one one the right
+                    // in all cases dont return from while loop 
+
+                    floorNode = inistanceRoot;
+                    inistanceRoot = inistanceRoot.Right;
+                }
+                // case 3
+                else if (inistanceRoot.Key > key)
+                {
+                    // go to left
+                    inistanceRoot = inistanceRoot.Left;
+                }
+            }
+            return floorNode;
         }
 
 
@@ -184,7 +363,7 @@ namespace TreeRobertSedwarg
             if (root == null)
                 return 0;
 
-            if (root.Key > key) 
+            if (root.Key > key)
             {
                 return Rank(root.Left, key);
             }
@@ -215,11 +394,11 @@ namespace TreeRobertSedwarg
             }
             else if (root.Key < key)
             {
-                return 1 + RankWithoutInternalFeild(root.Left , key) + RankWithoutInternalFeild(root.Right, key);
+                return 1 + RankWithoutInternalFeild(root.Left, key) + RankWithoutInternalFeild(root.Right, key);
             }
             else
             {
-                return RankWithoutInternalFeild(root.Left, key) ;
+                return RankWithoutInternalFeild(root.Left, key);
             }
 
         }

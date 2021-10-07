@@ -67,6 +67,21 @@ namespace RobertSedwergTest
 
 
         [Test]
+        public void FloorItrative()
+        {
+            Tree tree = new Tree();
+            tree.PutItrative(5, 1);
+            tree.PutItrative(4, 2);
+            tree.PutItrative(6, 3);
+            tree.PutItrative(2, 4);
+
+            Assert.AreEqual(tree.FloorItrative(6).Key, 6);
+            Assert.AreEqual(tree.FloorItrative(3).Key, 2);
+
+        }
+
+
+        [Test]
         public void Ceiling()
         {
             Tree tree = new Tree();
@@ -131,6 +146,42 @@ namespace RobertSedwergTest
             
             
 
+        }
+
+        [Test]
+        public void PutItrative()
+        {
+            Tree tree = new Tree();
+            tree.PutItrative(5, 1);
+            tree.PutItrative(4, 2);
+            tree.PutItrative(6, 3);
+            tree.PutItrative(2, 4);
+            var q = tree.Keys();
+            var n = q.Count;
+
+            Assert.AreEqual(q.Dequeue().Key, 2);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 5);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+
+
+
+
+
+        }
+
+        [Test]
+        public void GetItrative()
+        {
+            Tree tree = new Tree();
+            tree.Put(5, 1);
+            tree.Put(4, 2);
+            tree.Put(6, 3);
+            tree.Put(2, 4);
+         
+
+            Assert.AreEqual(tree.GetItrative(4).Value, 2);
+            Assert.AreEqual(tree.GetItrative(2).Value, 4);            
         }
         [Test]
         public void RangeKeys()
