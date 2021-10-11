@@ -32,8 +32,7 @@ namespace RobertSedwergTest
             tree.Put(6, 3);
             tree.Put(2, 4);
 
-            Assert.AreEqual(tree.Min(tree.Root).Key, 2);
-            
+            Assert.AreEqual(tree.Min(tree.Root).Key, 2);            
         }
 
         [Test]
@@ -46,7 +45,6 @@ namespace RobertSedwergTest
             tree.Put(2, 4);
 
             Assert.AreEqual(tree.Max(tree.Root).Key, 6);
-
         }
 
 
@@ -129,22 +127,42 @@ namespace RobertSedwergTest
         [Test]
         public void Keys()
         {
+            /*
+              5
+            4   6
+          2   
+             */
+
             Tree tree = new Tree();
             tree.Put(5, 1);
             tree.Put(4, 2);
             tree.Put(6, 3);
             tree.Put(2, 4);
-            var q = tree.Keys();
-            var n = q.Count;
-                
+            var q = tree.Keys(KeysOrder.InOrder);
+            var n = q.Count;                
                 Assert.AreEqual(q.Dequeue().Key, 2);
                 Assert.AreEqual(q.Dequeue().Key, 4);
                 Assert.AreEqual(q.Dequeue().Key, 5);
                 Assert.AreEqual(q.Dequeue().Key, 6);
-            
-            
-            
-            
+
+            q = tree.Keys(KeysOrder.PreOrder);            
+            Assert.AreEqual(q.Dequeue().Key, 5);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 2);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+
+            q = tree.Keys(KeysOrder.PostOrder);
+            Assert.AreEqual(q.Dequeue().Key, 2);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+            Assert.AreEqual(q.Dequeue().Key, 5);
+
+
+            q = tree.Keys(KeysOrder.BreadthFirst);
+            Assert.AreEqual(q.Dequeue().Key, 5);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+            Assert.AreEqual(q.Dequeue().Key, 2);
 
         }
 
@@ -156,7 +174,7 @@ namespace RobertSedwergTest
             tree.PutItrative(4, 2);
             tree.PutItrative(6, 3);
             tree.PutItrative(2, 4);
-            var q = tree.Keys();
+            var q = tree.Keys(KeysOrder.InOrder);
             var n = q.Count;
 
             Assert.AreEqual(q.Dequeue().Key, 2);

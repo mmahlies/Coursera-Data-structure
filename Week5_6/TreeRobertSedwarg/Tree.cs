@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 
 namespace TreeRobertSedwarg
 {
+
+    public enum KeysOrder
+    {
+        InOrder,
+        PostOrder,
+        PreOrder,
+        BreadthFirst
+    }
     public class Tree
     {
         public Node Root { get; set; }
-
-
         // u hsvr to run to phases 
         // 1- check the node exisit or not 
         //if exsist  => update node
@@ -59,7 +65,7 @@ namespace TreeRobertSedwarg
                     {
                         if (rootInistance.Left == null)
                         {
-                            rootInistance = new Node() { Key = key, Value = value };
+                            rootInistance.Left  = new Node() { Key = key, Value = value };
                             return;
                         }
                         else
@@ -72,7 +78,7 @@ namespace TreeRobertSedwarg
                     {
                         if (rootInistance.Right == null)
                         {
-                            rootInistance = new Node() { Key = key, Value = value };
+                            rootInistance.Right = new Node() { Key = key, Value = value };
                             return;
                         }
                         else
@@ -152,7 +158,6 @@ namespace TreeRobertSedwarg
             }
 
         }
-
 
         public Node GetItrative(int key)
         {
@@ -436,22 +441,81 @@ namespace TreeRobertSedwarg
         }
 
 
-        public Queue<Node> Keys()
+        public Queue<Node> Keys(KeysOrder keysOrder = KeysOrder.InOrder)
         {
             Queue<Node> q = new Queue<Node>();
-            InOrder(Root, q);
+            if (Root == null)
+            {
+                return q;
+            }
+            if (keysOrder == KeysOrder.InOrder)
+            {
+                InOrder(Root, q);
+            }
+            if (keysOrder == KeysOrder.PostOrder)
+            {
+                PostOrder(Root, q);
+            }
+            else if (keysOrder == KeysOrder.PreOrder)
+            {
+                PreOrder(Root, q);
+            }
+
+            else if (keysOrder == KeysOrder.BreadthFirst)
+            {
+                BreadthFirst(Root, q);
+            }
             return q;
+        }
+
+        private void BreadthFirst(Node root, Queue<Node> q)
+        {
+            Queue<Node> internalQ = new Queue<Node>();
+            internalQ.Enqueue(root);
+            while (internalQ.Count != 0)
+            {
+                var node = internalQ.Dequeue();
+                q.Enqueue(node);
+                if (node.Left != null)
+                {
+                    internalQ.Enqueue(node.Left);
+                }
+                if (node.Right != null)
+                {
+                    internalQ.Enqueue(node.Right);
+                }
+
+            }
         }
 
         private void InOrder(Node root, Queue<Node> q)
         {
+
             if (root == null)
                 return;
             InOrder(root.Left, q);
+            if (q.Count > 0 && q.Peek().Key > root.Key)
+                throw new Exception("Invalid BST");
             q.Enqueue(root);
             InOrder(root.Right, q);
 
 
+        }
+        private void PreOrder(Node root, Queue<Node> q)
+        {
+            if (root == null)
+                return;
+            q.Enqueue(root);
+            PreOrder(root.Left, q);
+            PreOrder(root.Right, q);
+        }
+        private void PostOrder(Node root, Queue<Node> q)
+        {
+            if (root == null)
+                return;
+            PostOrder(root.Left, q);
+            PostOrder(root.Right, q);
+            q.Enqueue(root);
         }
 
         public Queue<Node> Keys(int lo, int hi)
@@ -521,7 +585,6 @@ namespace TreeRobertSedwarg
 
         }
 
-
         private int GetHeight(Node node)
         {
             if (node == null)
@@ -547,6 +610,13 @@ namespace TreeRobertSedwarg
 
             return Math.Max(Height(root.Left), Height(root.Right)) + 1;
         }
+
+        //public bool IsValidBST(Node root)
+        //{
+        //    Keys(KeysOrder.InOrder);
+        //}
+
+
     }
 
 
