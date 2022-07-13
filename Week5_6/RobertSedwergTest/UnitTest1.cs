@@ -145,7 +145,20 @@ namespace RobertSedwergTest
                 Assert.AreEqual(q.Dequeue().Key, 5);
                 Assert.AreEqual(q.Dequeue().Key, 6);
 
+             q = tree.Keys(KeysOrder.InOrderItrative);
+             n = q.Count;
+            Assert.AreEqual(q.Dequeue().Key, 2);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 5);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+
             q = tree.Keys(KeysOrder.PreOrder);            
+            Assert.AreEqual(q.Dequeue().Key, 5);
+            Assert.AreEqual(q.Dequeue().Key, 4);
+            Assert.AreEqual(q.Dequeue().Key, 2);
+            Assert.AreEqual(q.Dequeue().Key, 6);
+
+            q = tree.Keys(KeysOrder.PreOrderItrative);
             Assert.AreEqual(q.Dequeue().Key, 5);
             Assert.AreEqual(q.Dequeue().Key, 4);
             Assert.AreEqual(q.Dequeue().Key, 2);

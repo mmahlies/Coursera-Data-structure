@@ -70,7 +70,12 @@
       "restore": {
         "projectUniqueName": "D:\\My Work\\Coursera Algorithm data structure specialization\\Data structure\\Week5_6\\TreeRobertSedwarg\\TreeRobertSedwarg.csproj",
         "projectName": "TreeRobertSedwarg",
-        "projectPath": "D:\\My Work\\Coursera Algorithm data structure specialization\\Data structure\\Week5_6\\TreeRobertSedwarg\\TreeRobertSedwarg.csproj"
+        "projectPath": "D:\\My Work\\Coursera Algorithm data structure specialization\\Data structure\\Week5_6\\TreeRobertSedwarg\\TreeRobertSedwarg.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}

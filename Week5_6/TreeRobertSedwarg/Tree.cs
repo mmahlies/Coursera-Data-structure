@@ -13,6 +13,9 @@ namespace TreeRobertSedwarg
         InOrder,
         PostOrder,
         PreOrder,
+        InOrderItrative,
+        PostOrderItrative,
+        PreOrderItrative,
         BreadthFirst
     }
     public class Tree
@@ -65,7 +68,7 @@ namespace TreeRobertSedwarg
                     {
                         if (rootInistance.Left == null)
                         {
-                            rootInistance.Left  = new Node() { Key = key, Value = value };
+                            rootInistance.Left = new Node() { Key = key, Value = value };
                             return;
                         }
                         else
@@ -452,6 +455,12 @@ namespace TreeRobertSedwarg
             {
                 InOrder(Root, q);
             }
+
+            if (keysOrder == KeysOrder.InOrderItrative)
+            {
+                InOrderItrative(Root, q);
+            }
+
             if (keysOrder == KeysOrder.PostOrder)
             {
                 PostOrder(Root, q);
@@ -460,6 +469,11 @@ namespace TreeRobertSedwarg
             {
                 PreOrder(Root, q);
             }
+            else if (keysOrder == KeysOrder.PreOrderItrative)
+            {
+                PreOrderItrative(Root, q);
+            }
+
 
             else if (keysOrder == KeysOrder.BreadthFirst)
             {
@@ -498,6 +512,61 @@ namespace TreeRobertSedwarg
                 throw new Exception("Invalid BST");
             q.Enqueue(root);
             InOrder(root.Right, q);
+
+
+        }
+        private void InOrderItrative(Node root, Queue<Node> q)
+        {
+
+            Stack<Node> stack = new Stack<Node>();
+
+            while (true)
+            {
+                if (root != null)
+                {
+                    stack.Push(root);
+                    root = root.Left;
+                }
+                else
+                {
+                    if (stack.Count == 0)
+                    {
+                        break;
+                    }
+
+                    Node node = stack.Pop();
+                    q.Enqueue(node);
+                    root = node.Right;
+                }
+            }
+
+
+        }
+        private void PreOrderItrative(Node root, Queue<Node> q)
+        {
+
+            Stack<Node> stack = new Stack<Node>();
+
+            while (true)
+            {
+                if (root != null)
+                {
+                    q.Enqueue(root);
+                    stack.Push(root);
+                    root = root.Left;
+                }
+                else
+                {
+                    if (stack.Count == 0)
+                    {
+                        break;
+                    }
+
+                    Node node = stack.Pop();
+                   
+                    root = node.Right;
+                }
+            }
 
 
         }
