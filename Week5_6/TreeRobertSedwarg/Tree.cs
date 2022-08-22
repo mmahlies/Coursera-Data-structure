@@ -90,7 +90,7 @@ namespace TreeRobertSedwarg
                         }
                     }
 
-
+                    // for all path from root to the new added node
                     rootInistance.RankNo = rootInistance.RankNo + 1;
                     rootInistance.HeightNo = rootInistance.HeightNo + 1;
                 }
@@ -131,7 +131,7 @@ namespace TreeRobertSedwarg
             {
                 root.Value = value;
             }
-            // to maintain the count of each node
+            // to maintain the count of each node (recurvice to all call stack nodes)
             root.RankNo = Size(root.Left) + Size(root.Right) + 1;
             root.HeightNo = Math.Max(GetHeight(root.Left), GetHeight(root.Right)) + 1;
             return root;
@@ -484,6 +484,7 @@ namespace TreeRobertSedwarg
 
         private void BreadthFirst(Node root, Queue<Node> q)
         {
+            Dictionary<int, int> s = new Dictionary<int, int>();
             Queue<Node> internalQ = new Queue<Node>();
             internalQ.Enqueue(root);
             while (internalQ.Count != 0)

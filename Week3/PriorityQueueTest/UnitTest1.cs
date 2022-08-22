@@ -7,9 +7,15 @@ namespace PriorityQueueTest
     [TestClass]
     public class TestPriorityQueue
     {
+        public void test()
+        {
+            
+        }
         [TestMethod]
         public void ShouldReturnMin()
         {
+
+
             int[] array = new int[10] { 7, 6, 4, 3, 1 ,10,2,9,8,5 };
             PiriortyQueue priority = new PiriortyQueue(array);
 
